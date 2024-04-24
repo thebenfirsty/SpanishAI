@@ -3,13 +3,23 @@ import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
 
 const StartScreen = ({ navigation }) => {
     return (
-        <View style={styles.container}>
-            <TouchableOpacity
-                onPress={() => navigation.navigate('BaristaScreen')}
-                style={styles.button}>
-                <Text style={styles.buttonText}>Start</Text>
-            </TouchableOpacity>
-        </View>
+        <>
+            <View style={styles.container}>
+                <TouchableOpacity
+                    onPress={() => navigation.navigate('Ordering Coffee')}
+                    style={styles.button}>
+                    <Text style={styles.buttonText}>Order Coffee</Text>
+                </TouchableOpacity>
+            </View>
+
+            <View style={styles.container}>
+                <TouchableOpacity
+                    onPress={() => navigation.navigate('Privacy and Support')}
+                    style={styles.button}>
+                    <Text style={styles.buttonText}>Privacy and Support</Text>
+                </TouchableOpacity>
+            </View>
+        </>
     );
 };
 
